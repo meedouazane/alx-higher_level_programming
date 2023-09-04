@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 import sys
-filename = "F1"
-with open(filename, "r") as file:
-    for line in file:
-        sys.stderr.write(line)
-    sys.exit(1)
+line = "and that piece of art is useful - Dora Korpar, 2015-10-19\n"
+sys.stderr.write(line)
+sys.exit(1)
