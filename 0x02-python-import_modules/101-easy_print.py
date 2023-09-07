@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-from print import write
-write()
+(lambda: __import__('print').write())()
