@@ -4,21 +4,22 @@
  * @p: python object
  * Return: Always 0
  */
-void print_python_list(PyObject *p)
+void print_python_list_info(PyObject *p)
 {
-	int n, i = 0, a;
-	PyObject *o;
+	int size, alloc, i;
+	PyObject *obj;
 
-	n = Py_SIZE(p);
-	a = ((PyListObject *)p)->allocated;
+	size = Py_SIZE(p);
+	alloc = ((PyListObject *)p)->allocated;
 
-	printf("[*] Size of the Python List = %d\n", n);
-	printf("[*] Allocated = %d\n", a);
+	printf("[*] Size of the Python List = %d\n", size);
+	printf("[*] Allocated = %d\n", alloc);
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < size; i++)
 	{
 		printf("Element %d: ", i);
-		o = PyList_GetItem(p, i);
-		printf("%s\n", Py_TYPE(o)->tp_name);
+
+		obj = PyList_GetItem(p, i);
+		printf("%s\n", Py_TYPE(obj)->tp_name);
 	}
 }
