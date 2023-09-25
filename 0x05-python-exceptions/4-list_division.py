@@ -2,7 +2,7 @@
 def list_division(my_list_1, my_list_2, list_length):
     c = 0
     div = 0
-    new_list = [list_length]
+    new_list = []
     while c != list_length:
         try:
             div = my_list_1[c] / my_list_2[c]
