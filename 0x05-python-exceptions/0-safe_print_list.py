@@ -9,6 +9,6 @@ def safe_print_list(my_list=[], x=0):
             else:
                 print("{}".format(my_list[i]), end="")
                 c = c + 1
-        return c
     except IndexError:
-        return c
+        None
+    return c
