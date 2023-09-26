@@ -69,7 +69,7 @@ class Square:
             print("")
 
     def __str__(self):
-        """ prints in stdout the square with the character #"""
+        """ Returns a string representation of the square using my_print """
         if self.__size == 0:
             print("")
         for i in range(0, self.__position[1]):
