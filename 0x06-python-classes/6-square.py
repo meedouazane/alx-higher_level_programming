@@ -13,8 +13,8 @@ class Square:
                if size is less than 0, raise a ValueError
         position :  must be a tuple of 2 positive integers
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
