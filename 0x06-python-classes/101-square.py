@@ -71,8 +71,7 @@ class Square:
     def __str__(self):
         """ prints in stdout the square with the character #"""
         if self.__size == 0:
-            print()
-            return
+            print("")
         for i in range(0, self.__position[1]):
             print("")
         for i in range(0, self.__size):
@@ -80,5 +79,6 @@ class Square:
                 print(" ", end="")
             for t in range(0, self.__size):
                 print("#", end="")
-            print("")
+            if i != self.__size-1:
+                print("")
         return ""
