@@ -16,8 +16,8 @@ class Rectangle:
         height : must be an integer, bigger than 0
         """
         Rectangle.number_of_instances += 1
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
