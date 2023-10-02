@@ -13,8 +13,8 @@ class Rectangle:
         width : must be an integer, bigger than 0
         height : must be an integer, bigger than 0
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
