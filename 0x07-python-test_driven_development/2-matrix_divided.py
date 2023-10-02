@@ -41,3 +41,7 @@ def matrix_divided(matrix, div):
             row.append(d)
         new_list.append(row)
     return new_list
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/2-matrix_divided.txt")

@@ -22,3 +22,7 @@ def text_indentation(text):
     lines = new_text.splitlines()
     result_text = '\n'.join([line.lstrip() for line in lines])
     print(result_text)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/5-text_indentation.txt")

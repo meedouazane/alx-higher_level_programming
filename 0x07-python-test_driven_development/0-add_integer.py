@@ -9,6 +9,9 @@ add_integer(a, b)
 def add_integer(a, b=98):
     """
     function that adds 2 integers a and b.
+    Args:
+        a : first number
+        b : Second number
     """
     if not (isinstance(a, int) or isinstance(a, float)):
         raise TypeError("a must be an integer")
@@ -19,3 +22,7 @@ def add_integer(a, b=98):
     if isinstance(a, float):
         a = int(a)
     return a + b
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/0-add_integer.txt")
