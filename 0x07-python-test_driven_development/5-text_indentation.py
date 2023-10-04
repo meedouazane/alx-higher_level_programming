@@ -9,6 +9,7 @@ def text_indentation(text):
     There should be no space at the beginning
     or at the end of each printed line
     '''
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     if not text:
@@ -26,6 +27,7 @@ def text_indentation(text):
     lines = new_text.splitlines()
     result_text = '\n'.join([line.lstrip() for line in lines])
     print(result_text)
+
 
 if __name__ == "__main__":
     import doctest

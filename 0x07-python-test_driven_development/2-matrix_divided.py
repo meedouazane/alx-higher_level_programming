@@ -4,7 +4,11 @@
 
 def matrix_divided(matrix, div):
 
-    ''' Divide a matrix '''
+    ''' Divide a matrix
+        args:
+        matrix:
+        div: divisor number
+    '''
     if not isinstance(matrix, list):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
