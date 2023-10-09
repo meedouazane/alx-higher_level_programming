@@ -23,3 +23,6 @@
 [-3, 0, 10, 12, 14]
 >>> print(my_list)
 [10, 14, 12, -3, 0]
+>>> my_list = MyList()
+>>> print(my_list)
+[]
