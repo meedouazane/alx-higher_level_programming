@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 Rectangle = __import__('9-rectangle').Rectangle
-'''  Square #1 '''
+'''  Square that inherits from Rectangle '''
 
 
 class Square(Rectangle):
