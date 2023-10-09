@@ -26,3 +26,14 @@
 >>> my_list = MyList()
 >>> print(my_list)
 []
+>>> my_list = MyList()
+>>> my_list.append(10)
+>>> my_list.append("b")
+>>> my_list.append(12)
+>>> my_list.append(-3)
+>>> my_list.append(0)
+>>> my_list = MyList()
+>>> print(my_list)
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
