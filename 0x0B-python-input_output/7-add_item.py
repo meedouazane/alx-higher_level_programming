@@ -6,5 +6,10 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 
 string = sys.argv[1:]
-save_to_json_file(string, "add_item.json")
-load_from_json_file("add_item.json")
+try:
+    txt = load_from_json_file("add_item.json")
+except Exception:
+    txt = []
+
+txt.extend(string)
+save_to_json_file(txt, "add_item.json")
