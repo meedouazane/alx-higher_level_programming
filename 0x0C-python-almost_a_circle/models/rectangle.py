@@ -97,11 +97,29 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         ''' public method using args '''
-        try:
+        if len(args) == 0:
             self.id = kwargs.get('id', self.id)
             self.__width = kwargs.get('width', self.__width)
             self.__height = kwargs.get('height', self.__height)
             self.__x = kwargs.get('x', self.__x)
             self.__y = kwargs.get('y', self.__y)
-        except IndexError:
-            pass
+        else:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+
+    def to_dictionary(self):
+        ''' returns the dictionary representation of a Rectangle '''
+        return { 
+                'id': self.id,
+                'width': self.__width,
+                'height': self.__height,
+                'x': self.__x,
+                'y': self.__y
+                }
+
