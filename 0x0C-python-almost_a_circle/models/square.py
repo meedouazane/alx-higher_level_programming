@@ -6,7 +6,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     '''  the class Square that inherits from Rectangle '''
     def __init__(self, size, x=0, y=0, id=None):
-        ''' Initializes the data: 
+        ''' Initializes the data:
         args:
         size: The width and height from rectangle.
         x = x from rectangle
@@ -19,7 +19,7 @@ class Square(Rectangle):
     @property
     def size(self):
         ''' getter for size '''
-        return self.__width
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -28,12 +28,12 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value
 
     def __str__(self):
         ''' overloading __str__ method  [Square] '''
-        return  f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     def update(self, *args, **kwargs):
         ''' Update of the class Square '''
@@ -50,6 +50,7 @@ class Square(Rectangle):
                 self.y = args[3]
             except IndexError:
                 pass
+
     def to_dictionary(self):
         ''' returns the dictionary representation of a Square '''
         return {
