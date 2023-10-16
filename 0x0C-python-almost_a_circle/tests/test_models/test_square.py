@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' unittest for square '''
+''' unittest for square  all methodes'''
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle

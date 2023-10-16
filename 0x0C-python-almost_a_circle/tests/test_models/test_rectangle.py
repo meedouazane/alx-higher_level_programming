@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-''' tests for Rectangle '''
+''' tests for Rectangle all methods in testrectangle class '''
 from models.rectangle import Rectangle
 import unittest
-import sys
-from io import StringIO
-from unittest.mock import patch
 
 
 class TestRectangle(unittest.TestCase):

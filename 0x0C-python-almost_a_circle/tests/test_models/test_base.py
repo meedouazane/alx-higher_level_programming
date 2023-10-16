@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Unittest for base '''
+''' Unittest for base test all methods '''
 import unittest
 from models.base import Base
 
