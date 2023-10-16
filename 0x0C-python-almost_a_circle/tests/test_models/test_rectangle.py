@@ -2,6 +2,9 @@
 ''' tests for Rectangle '''
 from models.rectangle import Rectangle
 import unittest
+import sys
+from io import StringIO
+from unittest.mock import patch
 
 
 class TestRectangle(unittest.TestCase):
@@ -103,6 +106,43 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle()
             r1.area()
-                                        
+
+    def test_str0(self):
+        ''' test without all '''
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        expect = f"[Rectangle] ({r1.id}) 2/1 - 4/6"
+        self.assertEqual(expect, r1.__str__())
+
+    def test_str1(self):
+        ''' test without id and y'''
+        r1 = Rectangle(3, 2, 1)
+        expect = f"[Rectangle] ({r1.id}) 1/0 - 3/2"
+        self.assertEqual(expect, r1.__str__())
+    
+    def test_str3(self):
+        ''' test without id and y'''
+        r1 = Rectangle(33, 12, 113)
+        expect = f"[Rectangle] ({r1.id}) 113/0 - 33/12"
+        self.assertEqual(expect, r1.__str__())
+
+    def test_str_empty(self):
+        ''' test empty'''
+        with self.assertRaises(TypeError):
+            r1 = Rectangle()
+            r1.__str_()
+
+    def test_str_string(self):
+        ''' test string'''
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(5, 4, 2, "b")
+            r1.__str_()
+    
+    def test_negative_number(self):
+        ''' test negative number'''
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(5, -4, 2, -1)
+            r1.__str_()
+
+
     if __name__ == "__main__":
         unittest.main()

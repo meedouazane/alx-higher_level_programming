@@ -28,3 +28,4 @@ class Test_square(unittest.TestCase):
         ''' test getter with zero '''
         with self.assertRaises(ValueError):
             s1 = Square(0)
+
