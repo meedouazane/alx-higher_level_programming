@@ -118,7 +118,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(3, 2, 1)
         expect = f"[Rectangle] ({r1.id}) 1/0 - 3/2"
         self.assertEqual(expect, r1.__str__())
-    
+
     def test_str3(self):
         ''' test without id and y'''
         r1 = Rectangle(33, 12, 113)
@@ -129,20 +129,19 @@ class TestRectangle(unittest.TestCase):
         ''' test empty'''
         with self.assertRaises(TypeError):
             r1 = Rectangle()
-            r1.__str_()
+            r1.__str__()
 
     def test_str_string(self):
         ''' test string'''
         with self.assertRaises(TypeError):
             r1 = Rectangle(5, 4, 2, "b")
-            r1.__str_()
-    
+            r1.__str__()
+
     def test_negative_number(self):
         ''' test negative number'''
         with self.assertRaises(ValueError):
             r1 = Rectangle(5, -4, 2, -1)
-            r1.__str_()
-
+            r1.__str__()
 
     if __name__ == "__main__":
         unittest.main()

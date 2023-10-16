@@ -21,21 +21,17 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         self.assertEqual(b1.id, 2)
 
-
     def testwithoutid3(self):
         ''' test without assign id '''
         b1 = Base()
         self.assertEqual(b1.id, 3)
-
 
     def testid0(self):
         ''' test assign id '''
         b1 = Base(0)
         self.assertEqual(b1.id, 0)
 
-
     def testNegativeid(self):
         ''' test assign negative id '''
         b1 = Base(-10)
         self.assertEqual(b1.id, -10)
-
