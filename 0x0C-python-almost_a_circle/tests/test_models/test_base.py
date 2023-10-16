@@ -5,6 +5,7 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    ''' Unittest for base '''
 
     def testassignid(self):
         ''' test assign id '''
@@ -35,3 +36,7 @@ class TestBase(unittest.TestCase):
         ''' test assign negative id '''
         b1 = Base(-10)
         self.assertEqual(b1.id, -10)
+
+    if __name__ == "__main__":
+        unittest.main()
+
