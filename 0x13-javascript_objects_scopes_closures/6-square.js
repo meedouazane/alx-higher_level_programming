@@ -7,22 +7,21 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c) {
-      let square = '';
-      for (let i = 0; i < this.height; i++) {
-        for (let j = 0; j < this.width; j++) {
-          square += 'C' + '';
-        }
-        if (i === this.height - 1) {
-          break;
-        } else {
-          square += '\n';
-        }
-      }
-      console.log(square);
-    } else {
-      super.print();
+    if (c === undefined) {
+      c = 'X';
     }
+    let square = '';
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
+        square += c + '';
+      }
+      if (i === this.height - 1) {
+        break;
+      } else {
+        square += '\n';
+      }
+    }
+    console.log(square);
   }
 }
 module.exports = Square;
