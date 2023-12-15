@@ -18,14 +18,10 @@ if __name__ == "__main__":
             SELECT cities.name
             FROM cities INNER JOIN states ON states.id = cities.state_id
             WHERE states.name = %s
-            ORDER BY cities.id ASC
+            ORDER BY states.id ASC
             """, (state_name,))
     rows = cur.fetchall()
-    i = 0
-    for i, element in enumerate(rows):
-        if (i == len(rows) - 1):
-            print("%s" % element)
-        else:
-            print("%s, " % element, end="")
+    elements = list(element[0] for element in rows)
+    print(*elements, sep=", ")
     cur.close()
     connection.close()
