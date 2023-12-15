@@ -18,4 +18,7 @@ if __name__ == "__main__":
 
     states = session.query(State)
     element = states.first()
-    print(f"{element.id}: {element.name}")
+    if (element):
+        print(f"{element.id}: {element.name}")
+    else:
+        print("Nothing")
