@@ -18,6 +18,7 @@ if __name__ == "__main__":
             SELECT cities.name
             FROM cities INNER JOIN states ON states.id = cities.state_id
             WHERE states.name = %s
+            ORDER BY cities.id ASC
             """, (state_name,))
     rows = cur.fetchall()
     i = 0
