@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cur.execute("""SELECT * FROM states
                     WHERE name LIKE BINARY '{}'
                     ORDER BY id ASC
-                """, .format(state_name))
+                """ .format(state_name))
     rows = cur.fetchall()
     for row in rows:
         print(row)
