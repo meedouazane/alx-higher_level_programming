@@ -14,8 +14,8 @@ if __name__ == "__main__":
             passwd=sys.argv[2], db=sys.argv[3])
     cur = connection.cursor()
     state_name = sys.argv[4]
-    cur.execute("SELECT * FROM states
-                WHERE name='" + state_name + "' ORDER BY id ASC")
+    cur.execute("""SELECT * FROM states
+                WHERE name='""" + state_name + "' ORDER BY id ASC")
     rows = cur.fetchall()
     for row in rows:
         print(row)
