@@ -6,7 +6,6 @@
 import sys
 import MySQLdb
 
-
 if __name__ == "__main__":
 
     connection = MySQLdb.connect(
@@ -15,7 +14,7 @@ if __name__ == "__main__":
     cur = connection.cursor()
     state_name = sys.argv[4]
     cur.execute("""SELECT * FROM states
-                WHERE name='""" + state_name + "' ORDER BY id ASC")
+                    WHERE name= %s ORDER BY id ASC""", (state_name,))
     rows = cur.fetchall()
     for row in rows:
         print(row)
