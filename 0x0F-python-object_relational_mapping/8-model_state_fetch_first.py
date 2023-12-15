@@ -17,6 +17,5 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State)
-    for element in states:
-        print(f"{element.id}: {element.name}")
-        break;
+    element = states.first()
+    print(f"{element.id}: {element.name}")
