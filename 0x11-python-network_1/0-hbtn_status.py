@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 ''' Python script that fetches website '''
-import urllib.request
+from urllib import request
 
 
 if __name__ == "__main__":
