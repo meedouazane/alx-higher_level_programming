@@ -15,4 +15,4 @@ if __name__ == "__main__":
     if data:
         print(f"[{data['id']}] {data['name']}")
     else:
-        print("No result")
+        print("Not a valid JSON")
