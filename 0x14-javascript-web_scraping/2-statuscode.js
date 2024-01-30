@@ -7,5 +7,5 @@ request(arg[2], function (error, response) {
   if (error) {
     console.error(error.message);
   }
-  console.log('code: ', response && response.statusCode);
+  console.log('code:', response && response.statusCode);
 });
