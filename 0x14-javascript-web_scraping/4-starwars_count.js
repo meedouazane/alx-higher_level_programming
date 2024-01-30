@@ -2,10 +2,10 @@
 
 const request = require('request');
 
-const url = 'https://swapi-api.alx-tools.com/api/films/';
+const arg = process.argv;
 const wedge = 'https://swapi-api.alx-tools.com/api/people/18/';
 let c = 0;
-request(url, function (error, _response, body) {
+request(arg[2], function (error, _response, body) {
   if (error) {
     console.error(error.message);
   }
