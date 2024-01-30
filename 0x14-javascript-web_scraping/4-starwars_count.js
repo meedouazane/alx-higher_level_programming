@@ -3,7 +3,6 @@
 const request = require('request');
 
 const arg = process.argv;
-const wedge = 'https://swapi-api.alx-tools.com/api/people/18/';
 let c = 0;
 request(arg[2], function (error, _response, body) {
   if (error) {
@@ -12,7 +11,7 @@ request(arg[2], function (error, _response, body) {
   const jsonData = JSON.parse(body);
   for (let i = 0; i < jsonData.results.length; i++) {
     for (let j = 0; j < jsonData.results[i].characters.length; j++) {
-      if (jsonData.results[i].characters[j] === wedge) {
+      if (jsonData.results[i].characters[j].includes('18')) {
         c++;
       }
     }
